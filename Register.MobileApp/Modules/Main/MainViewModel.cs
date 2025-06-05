@@ -1,6 +1,6 @@
 namespace Register.MobileApp.Modules.Main;
 
-public sealed partial class MenuViewModel : AppViewModelBase
+public sealed partial class MainViewModel : AppViewModelBase
 {
     [ObservableProperty]
     public partial string Flavor { get; set; }
@@ -10,7 +10,7 @@ public sealed partial class MenuViewModel : AppViewModelBase
 
     public IObserveCommand ForwardCommand { get; }
 
-    public MenuViewModel(IAppInfo appInfo)
+    public MainViewModel(IAppInfo appInfo)
     {
         Flavor = !String.IsNullOrEmpty(Variants.Flavor) ? Variants.Flavor : "Unknown";
         Version = appInfo.Version;

@@ -38,6 +38,6 @@ public sealed partial class App
 
         // Navigate
         var navigator = serviceProvider.GetRequiredService<INavigator>();
-        await navigator.ForwardAsync(ViewId.Menu);
+        await navigator.ForwardAsync(ViewId.Main);
     }
 }

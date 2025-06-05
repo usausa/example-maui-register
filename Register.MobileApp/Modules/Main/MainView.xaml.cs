@@ -1,9 +1,9 @@
 namespace Register.MobileApp.Modules.Main;
 
-[View(ViewId.Menu)]
-public sealed partial class MenuView
+[View(ViewId.Main)]
+public sealed partial class MainView
 {
-    public MenuView()
+    public MainView()
     {
         InitializeComponent();
     }

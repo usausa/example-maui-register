@@ -4,10 +4,10 @@
              xmlns:s="http://smart/maui"
              xmlns:shell="clr-namespace:Register.MobileApp.Shell"
              xmlns:module="clr-namespace:Register.MobileApp.Modules.Main"
-             x:Class="Register.MobileApp.Modules.Main.MenuView"
-             x:DataType="{x:Type module:MenuViewModel}"
-             s:BindingContextResolver.Type="{x:Type module:MenuViewModel}"
-             shell:ShellProperty.Title="Menu">
+             x:Class="Register.MobileApp.Modules.Main.MainView"
+             x:DataType="{x:Type module:MainViewModel}"
+             s:BindingContextResolver.Type="{x:Type module:MainViewModel}"
+             shell:ShellProperty.Title="メイン画面">
 
     <Grid Style="{StaticResource FillGrid}"
           RowDefinitions="*" />

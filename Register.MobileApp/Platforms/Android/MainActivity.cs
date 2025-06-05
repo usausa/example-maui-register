@@ -6,6 +6,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 
+using AndroidX.Core.View;
+
 using MauiComponents;
 
 [Activity(
@@ -15,7 +17,7 @@ using MauiComponents;
     AlwaysRetainTaskState = true,
     LaunchMode = LaunchMode.SingleInstance,
     ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density,
-    ScreenOrientation = ScreenOrientation.Portrait)]
+    ScreenOrientation = ScreenOrientation.Landscape)]
 public sealed class MainActivity : MauiAppCompatActivity
 {
     protected override void OnCreate(Bundle? savedInstanceState)
@@ -23,5 +25,13 @@ public sealed class MainActivity : MauiAppCompatActivity
         base.OnCreate(savedInstanceState);
 
         ActivityResolver.Init(this);
+
+        if (Window is not null)
+        {
+            WindowCompat.SetDecorFitsSystemWindows(Window, false);
+            using var windowInsetsController = new WindowInsetsControllerCompat(Window, Window.DecorView);
+            windowInsetsController.Hide(WindowInsetsCompat.Type.SystemBars());
+            windowInsetsController.SystemBarsBehavior = WindowInsetsControllerCompat.BehaviorShowTransientBarsBySwipe;
+        }
     }
 }
