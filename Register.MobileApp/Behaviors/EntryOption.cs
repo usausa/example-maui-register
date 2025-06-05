@@ -9,9 +9,9 @@ using Android.Widget;
 
 #if ANDROID
 using Java.Lang;
-#endif
 
 using Microsoft.Maui.Handlers;
+#endif
 
 public static class EntryOption
 {

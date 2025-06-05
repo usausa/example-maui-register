@@ -1,6 +1,8 @@
 namespace Register.MobileApp.Behaviors;
 
+#if ANDROID
 using Microsoft.Maui.Handlers;
+#endif
 
 public static class ButtonOption
 {

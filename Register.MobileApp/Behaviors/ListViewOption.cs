@@ -2,9 +2,9 @@ namespace Register.MobileApp.Behaviors;
 
 #if ANDROID
 using Android.Views;
-#endif
 
 using Microsoft.Maui.Controls.Handlers.Compatibility;
+#endif
 
 public static class ListViewOption
 {

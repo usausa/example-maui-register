@@ -6,9 +6,9 @@ using Android.Graphics.Drawables;
 
 #if ANDROID
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
-#endif
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
+#endif
 
 public static class Border
 {

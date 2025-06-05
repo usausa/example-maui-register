@@ -2,9 +2,9 @@ namespace Register.MobileApp.Behaviors;
 
 #if ANDROID
 using Android.Widget;
-#endif
 
 using Microsoft.Maui.Handlers;
+#endif
 
 public static class LabelOption
 {
