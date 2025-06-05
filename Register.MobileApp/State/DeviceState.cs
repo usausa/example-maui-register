@@ -33,8 +33,6 @@ public static class DeviceStateExtensions
 
 public sealed partial class DeviceState : ObservableObject, IDisposable
 {
-    private readonly ILogger<DeviceState> log;
-
     private readonly List<IDisposable> disposables = [];
 
     // Battery
@@ -60,12 +58,9 @@ public sealed partial class DeviceState : ObservableObject, IDisposable
     public partial NetworkState NetworkState { get; private set; }
 
     public DeviceState(
-        ILogger<DeviceState> log,
         IBattery battery,
         IConnectivity connectivity)
     {
-        this.log = log;
-
         // Battery
         UpdateBattery(battery.ChargeLevel, battery.State, battery.PowerSource);
         disposables.Add(battery.ObserveBatteryInfoChangedOnCurrentContext().Subscribe(

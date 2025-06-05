@@ -19,11 +19,9 @@ public sealed partial class MainPageViewModel : ExtendViewModelBase, IShellContr
     //--------------------------------------------------------------------------------
 
     public MainPageViewModel(
-        ILogger<MainPageViewModel> log,
         INavigator navigator,
         IBusyView progressView,
-        IScreen screen,
-        IDialog dialog)
+        IScreen screen)
     {
         Navigator = navigator;
         BusyView = progressView;
