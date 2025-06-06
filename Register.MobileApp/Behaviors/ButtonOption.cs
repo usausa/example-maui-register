@@ -1,9 +1,5 @@
 namespace Register.MobileApp.Behaviors;
 
-#if ANDROID
-using Microsoft.Maui.Handlers;
-#endif
-
 public static partial class ButtonOption
 {
     public static readonly BindableProperty EnableTextAlignmentProperty = BindableProperty.CreateAttached(
