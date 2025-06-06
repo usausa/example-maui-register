@@ -4,7 +4,7 @@ namespace Register.MobileApp.Behaviors;
 using Microsoft.Maui.Handlers;
 #endif
 
-public static class ButtonOption
+public static partial class ButtonOption
 {
     public static readonly BindableProperty EnableTextAlignmentProperty = BindableProperty.CreateAttached(
         "EnableTextAlignment",
@@ -36,21 +36,5 @@ public static class ButtonOption
 
     public static void SetVerticalTextAlignment(BindableObject bindable, TextAlignment value) => bindable.SetValue(VerticalTextAlignmentProperty, value);
 
-    public static void UseCustomMapper()
-    {
-#if ANDROID
-        ButtonHandler.Mapper.AppendToMapping("TextAlignment", UpdateTextAlignment);
-#endif
-    }
-
-#if ANDROID
-    private static void UpdateTextAlignment(IButtonHandler handler, IButton view)
-    {
-        if ((view is Button button) && GetEnableTextAlignment(button))
-        {
-            handler.PlatformView.Gravity = GetHorizontalTextAlignment(button).ToHorizontalGravity() |
-                                           GetVerticalTextAlignment(button).ToVerticalGravity();
-        }
-    }
-#endif
+    public static partial void UseCustomMapper();
 }
