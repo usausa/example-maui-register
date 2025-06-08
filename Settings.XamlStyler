@@ -108,6 +108,7 @@
     "input:*",
     "effects:*",
 
+    "FontFamily, FontSize, FontAttributes",
     "TextColor, BackgroundColor",
     "Text",
 

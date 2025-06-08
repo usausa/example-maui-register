@@ -2,7 +2,7 @@ namespace Register.MobileApp.Behaviors;
 
 using Android.Views;
 
-internal static class Extensions
+internal static partial class Extensions
 {
     public static GravityFlags ToHorizontalGravity(this Microsoft.Maui.TextAlignment alignment)
     {
